@@ -1,6 +1,4 @@
-import React from "react";
-
-const Banner = () => {
+const Banner = async () => {
   return (
     <section className="banner">
       <div className="banner-content">
