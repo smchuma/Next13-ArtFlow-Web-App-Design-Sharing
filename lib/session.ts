@@ -36,15 +36,16 @@ export const authOptions: NextAuthOptions = {
     logo: "artFlow",
   },
   callbacks: {
-    async session({ session }) {
-      const email = session?.user?.email as string;
+    async session({ session, token }) {
       try {
+        const email = session?.user?.email as string;
         const data = (await getUser(email)) as { user?: UserProfile };
+
         const newSession = {
           ...session,
           user: {
             ...session.user,
-            ...data?.user,
+            ...data.user,
           },
         };
         return newSession;
@@ -59,7 +60,7 @@ export const authOptions: NextAuthOptions = {
           user?: UserProfile;
         };
 
-        if (!userExists) {
+        if (!userExists.user) {
           await createUser(
             user.name as string,
             user.email as string,

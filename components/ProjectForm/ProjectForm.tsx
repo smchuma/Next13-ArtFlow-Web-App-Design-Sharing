@@ -6,6 +6,8 @@ import { categoryFilters } from "@/constants";
 import CustomMenu from "../CustomMenu/CustomMenu";
 import { useState } from "react";
 import Button from "../Button/Button";
+import { createNewProject, fetchToken } from "@/lib/actions";
+import { useRouter } from "next/navigation";
 
 type Props = {
   type: string;
@@ -22,6 +24,7 @@ const ProjectForm = ({ type, session }: Props) => {
     category: "",
   });
   const [isSubmitting, setIssSubmitting] = useState(false);
+  const router = useRouter();
 
   const handleStateChange = (fieldName: string, value: string) => {
     setForm((prevState) => ({ ...prevState, [fieldName]: value }));
@@ -42,7 +45,23 @@ const ProjectForm = ({ type, session }: Props) => {
     };
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {};
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIssSubmitting(true);
+
+    const { token } = await fetchToken();
+
+    try {
+      if (type === "create")
+        // create project
+        await createNewProject(form, session?.user?.id, token);
+      router.push("/");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIssSubmitting(false);
+    }
+  };
 
   return (
     <form onSubmit={handleFormSubmit} className="flexStart form">

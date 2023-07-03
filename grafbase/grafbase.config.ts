@@ -24,7 +24,7 @@ const User = g
 const Project = g
   .model("Project", {
     title: g.string().length({ min: 3 }),
-    desc: g.string(),
+    description: g.string(),
     image: g.url(),
     liveSiteUrl: g.url(),
     githubUrl: g.url(),
