@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { getCurrentUser } from "@/lib/session";
 import { getProjectDetails } from "@/lib/actions";
-
-// import ProjectActions from "@/components/ProjectActions"
-// import RelatedProjects from "@/components/RelatedProjects"
 import { ProjectInterface } from "@/common.types";
-import { Modal } from "@/components";
-import RelatedProjects from "@/components/RelatedProjects/RelatedProjects";
-// import ProjectActions from "@/components/ProjectActions"
+import { Modal, ProjectActions, RelatedProjects } from "@/components";
 
 const Project = async ({ params: { id } }: { params: { id: string } }) => {
   const session = await getCurrentUser();
@@ -57,7 +51,7 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
 
         {session?.user?.email === projectDetails?.createdBy?.email && (
           <div className="flex justify-end items-center gap-2">
-            {/* <ProjectActions projectId={projectDetails?.id} /> */}
+            <ProjectActions projectId={projectDetails?.id} />
           </div>
         )}
       </section>

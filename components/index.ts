@@ -5,3 +5,5 @@ export { default as Banner } from "./Banner/Banner";
 export { default as Modal } from "./Modal/Modal";
 export { default as ProjectForm } from "./ProjectForm/ProjectForm";
 export { default as ProjectCard } from "./ProjectCard/ProjectCard";
+export { default as ProjectActions } from "./ProjectActions/ProjectActions";
+export { default as RelatedProjects } from "./RelatedProjects/RelatedProjects";

@@ -70,7 +70,7 @@ body {
 
 /* Project Actions */
 .edit-action_btn {
-  @apply p-3 text-gray-100 bg-light-white-400 rounded-lg text-sm font-medium;
+  @apply p-3  text-white bg-[#484851] hover:bg-green-500 rounded-lg text-sm font-medium;
 }
 
 .delete-action_btn {
