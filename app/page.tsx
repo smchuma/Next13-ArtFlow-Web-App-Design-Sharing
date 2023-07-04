@@ -1,5 +1,5 @@
 import { ProjectInterface } from "@/common.types";
-import { Banner, ProjectCard } from "@/components";
+import { Banner, Categories, ProjectCard } from "@/components";
 import { fetchAllProjects } from "@/lib/actions";
 import { getCurrentUser } from "@/lib/session";
 
@@ -15,9 +15,17 @@ type ProjectSearch = {
   };
 };
 
-const Home = async () => {
+type SearchParams = {
+  category?: string;
+};
+
+type Props = {
+  searchParams: SearchParams;
+};
+
+const Home = async ({ searchParams: { category } }: Props) => {
   const session = await getCurrentUser();
-  const data = (await fetchAllProjects()) as ProjectSearch;
+  const data = (await fetchAllProjects(category)) as ProjectSearch;
   const projectsToDisplay = data?.projectSearch?.edges || [];
 
   if (projectsToDisplay.length === 0) {
@@ -32,7 +40,9 @@ const Home = async () => {
   return (
     <section>
       {!session?.user && <Banner />}
-      <h1>categories</h1>
+      <section className="px-32 py-5 border-b-2 border-gray-100 ">
+        <Categories />
+      </section>
       <section className="projects-grid paddings">
         {projectsToDisplay.map(({ node }: { node: ProjectInterface }) => (
           <ProjectCard
@@ -45,6 +55,7 @@ const Home = async () => {
             userId={node?.createdBy?.id}
           />
         ))}
+        C
       </section>
       <h1>load more</h1>
     </section>
