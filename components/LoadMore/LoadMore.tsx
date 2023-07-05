@@ -22,11 +22,11 @@ const LoadMore = ({
     const currentParams = new URLSearchParams(window.location.search);
 
     if (direction === "next" && hasNextPage) {
-      currentParams.delete("startCursor");
-      currentParams.set("endCursor", endCursor);
+      currentParams.delete("startcursor");
+      currentParams.set("endcursor", endCursor);
     } else if (direction === "first" && hasPreviousPage) {
-      currentParams.delete("endCursor");
-      currentParams.set("startCursor", startCursor);
+      currentParams.delete("endcursor");
+      currentParams.set("startcursor", startCursor);
     }
 
     const newSearchParams = currentParams.toString();
@@ -44,7 +44,7 @@ const LoadMore = ({
         />
       )}
       {hasNextPage && (
-        <Button title="Next" handleClick={() => handleNavigation("first")} />
+        <Button title="Next" handleClick={() => handleNavigation("next")} />
       )}
     </div>
   );

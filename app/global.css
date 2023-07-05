@@ -178,7 +178,7 @@ body {
   height: 70vh;
   position: relative;
   display: flex;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
     url("https://res.cloudinary.com/smchuma/image/upload/v1688138419/bb_isbyga.jpg");
   align-items: center;
   justify-content: center;

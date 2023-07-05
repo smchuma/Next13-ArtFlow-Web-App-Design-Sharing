@@ -17,15 +17,20 @@ type ProjectSearch = {
 
 type SearchParams = {
   category?: string;
+  endCursor?: string;
 };
 
 type Props = {
   searchParams: SearchParams;
 };
 
-const Home = async ({ searchParams: { category } }: Props) => {
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
+export const revalidate = 0;
+
+const Home = async ({ searchParams: { category, endCursor } }: Props) => {
   const session = await getCurrentUser();
-  const data = (await fetchAllProjects(category)) as ProjectSearch;
+  const data = (await fetchAllProjects(category, endCursor)) as ProjectSearch;
   const projectsToDisplay = data?.projectSearch?.edges || [];
 
   if (projectsToDisplay.length === 0) {
