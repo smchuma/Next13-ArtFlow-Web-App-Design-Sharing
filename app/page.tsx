@@ -1,5 +1,5 @@
 import { ProjectInterface } from "@/common.types";
-import { Banner, Categories, ProjectCard } from "@/components";
+import { Banner, Categories, LoadMore, ProjectCard } from "@/components";
 import { fetchAllProjects } from "@/lib/actions";
 import { getCurrentUser } from "@/lib/session";
 
@@ -30,12 +30,16 @@ const Home = async ({ searchParams: { category } }: Props) => {
 
   if (projectsToDisplay.length === 0) {
     return (
-      <section className="flexStart flex-col paddings">
-        categories
-        <p className="no-result text-center">No projects found</p>
+      <section className="">
+        <section className="px-32 py-5 border-b-2 border-gray-100 ">
+          <Categories />
+        </section>
+        <p className="no-result text-center py-40">No projects found</p>
       </section>
     );
   }
+
+  const pagination = data?.projectSearch?.pageInfo;
 
   return (
     <section>
@@ -57,7 +61,14 @@ const Home = async ({ searchParams: { category } }: Props) => {
         ))}
         C
       </section>
-      <h1>load more</h1>
+      <div className="paddings">
+        <LoadMore
+          startCursor={pagination.startCursor}
+          endCursor={pagination.endCursor}
+          hasPreviousPage={pagination.hasPreviousPage}
+          hasNextPage={pagination.hasNextPage}
+        />
+      </div>
     </section>
   );
 };

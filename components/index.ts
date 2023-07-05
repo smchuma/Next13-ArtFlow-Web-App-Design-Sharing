@@ -8,3 +8,4 @@ export { default as ProjectCard } from "./ProjectCard/ProjectCard";
 export { default as ProjectActions } from "./ProjectActions/ProjectActions";
 export { default as RelatedProjects } from "./RelatedProjects/RelatedProjects";
 export { default as Categories } from "./Categories/Categories";
+export { default as LoadMore } from "./LoadMore/LoadMore";
