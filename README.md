@@ -42,22 +42,9 @@ To run the artflow Project locally, please follow these steps:
 4. Start the development server: `npm run dev`
 5. Open your browser and visit `http://localhost:3000`
 
-## Contributing
-
-Contributions to the Artflow Project are welcome! If you would like to contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature`
-3. Make your changes and commit them: `git commit -m 'Add your feature'`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Open a pull request, and describe the changes you've made.
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as you see fit.
 
 ## Contact
 
-If you have any questions or suggestions regarding the Artflow Project, feel free to reach out to me at [your-email@example.com](mailto:your-email@example.com). I would be happy to hear from you!
+If you have any questions or suggestions regarding the Artflow Project, feel free to reach out to me at laurentsamora6@gmail.com. I would be happy to hear from you!
 
 Thank you for your interest in the Artflow Project. Enjoy exploring and learning!
