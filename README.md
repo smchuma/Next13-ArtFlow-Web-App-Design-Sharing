@@ -1,6 +1,6 @@
 # Artflow Project (Dribbble Clone)
 
-![Artflow Project](./images/2.png)
+![Artflow Project](./public/images/1.png)
 
 ## Description
 
