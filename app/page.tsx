@@ -6,11 +6,18 @@ import { getCurrentUser } from "@/lib/session";
 type ProjectSearch = {
   projectSearch: {
     edges: { node: ProjectInterface }[];
+    pageInfo: {
+      hasPreviousPage: boolean;
+      hasNextPage: boolean;
+      startCursor: string;
+      endCursor: string;
+    };
   };
 };
 
 type SearchParams = {
   category?: string;
+  endCursor?: string;
 };
 
 type Props = {
@@ -21,9 +28,9 @@ export const dynamic = "force-dynamic";
 export const dynamicParams = true;
 export const revalidate = 0;
 
-const Home = async ({ searchParams: { category } }: Props) => {
+const Home = async ({ searchParams: { category, endCursor } }: Props) => {
   const session = await getCurrentUser();
-  const data = (await fetchAllProjects(category)) as ProjectSearch;
+  const data = (await fetchAllProjects(category, endCursor)) as ProjectSearch;
   const projectsToDisplay = data?.projectSearch?.edges || [];
 
   if (projectsToDisplay.length === 0) {
@@ -36,6 +43,8 @@ const Home = async ({ searchParams: { category } }: Props) => {
       </section>
     );
   }
+
+  const pagination = data?.projectSearch?.pageInfo;
 
   return (
     <section>
@@ -57,6 +66,14 @@ const Home = async ({ searchParams: { category } }: Props) => {
         ))}
         C
       </section>
+      <div className="paddings">
+        <LoadMore
+          startCursor={pagination.startCursor}
+          endCursor={pagination.endCursor}
+          hasPreviousPage={pagination.hasPreviousPage}
+          hasNextPage={pagination.hasNextPage}
+        />
+      </div>
     </section>
   );
 };
