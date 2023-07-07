@@ -1,10 +1,10 @@
-# Artflow Project (Dribbble Clone)
+# Artflow Project- Design-Sharing Platform
 
 ![Artflow Project](./public/images/1.png)
 
 ## Description
 
-artflow Project is a dark version of Dribbble, a popular platform for designers to showcase their work. This project was built as a means for me to learn Next.js 13, a powerful React framework, and enhance my understanding of web development concepts through hands-on experience.
+artflow Project is a dark version of Dribble, a popular platform for designers to showcase their work. This project was built as a means for me to learn Next.js 13, a powerful React framework, and enhance my understanding of web development concepts through hands-on experience.
 
 Building this project proved to be a rewarding challenge, especially when it came to working with GraphQL and Graphbase. By immersing myself in the development process, I was able to gain a deeper understanding of these technologies and solidify my knowledge.
 
