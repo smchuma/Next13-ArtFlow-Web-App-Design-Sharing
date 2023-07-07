@@ -25,7 +25,7 @@ const Navbar = async () => {
           <h1 className="logo text-2xl font-bold">artFlow</h1>
         </Link>
       </div>
-      <div className="flex-1 flex justify-end align-middle gap-4">
+      <div className="flex-1 flex justify-end align-middle items-center gap-4">
         {session?.user ? (
           <>
             <ProfileMenu session={session} />

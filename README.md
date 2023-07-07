@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Artflow Project (Dribbble Clone)
 
-## Getting Started
+![Artflow Project](./images/2.png)
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+artflow Project is a dark version of Dribbble, a popular platform for designers to showcase their work. This project was built as a means for me to learn Next.js 13, a powerful React framework, and enhance my understanding of web development concepts through hands-on experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Building this project proved to be a rewarding challenge, especially when it came to working with GraphQL and Graphbase. By immersing myself in the development process, I was able to gain a deeper understanding of these technologies and solidify my knowledge.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js 13:** A React framework that provides server-side rendering and other powerful features to build scalable web applications.
+- **Tailwind CSS:** A utility-first CSS framework that allowed for rapid UI development and customization.
+- **GraphQL with Graphbase:** Initially, the project utilized Graphbase for the database. However, I am planning to transition to Superbase to further improve the project's functionality and data management capabilities.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Browse and explore a dark-themed interface for showcasing design work.
+- Discover and engage with various design projects posted by users.
+- Interact with the user community by liking, commenting, and sharing projects.
+- Smooth navigation and intuitive user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Screenshot 1](./images/1.png)
+![Screenshot 2](./images/3.png)
+![Screenshot 3](./images/4.png)
+![Screenshot 4](./images/5.png)
+![Screenshot 5](./images/6.png)
+![Screenshot 6](./images/7.png)
 
-## Deploy on Vercel
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run the artflow Project locally, please follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository: `git clone https://github.com/your-username/artflow-project.git`
+2. Navigate to the project directory: `cd artflow-project`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm run dev`
+5. Open your browser and visit `http://localhost:3000`
+
+## Contributing
+
+Contributions to the Artflow Project are welcome! If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Make your changes and commit them: `git commit -m 'Add your feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a pull request, and describe the changes you've made.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as you see fit.
+
+## Contact
+
+If you have any questions or suggestions regarding the Artflow Project, feel free to reach out to me at [your-email@example.com](mailto:your-email@example.com). I would be happy to hear from you!
+
+Thank you for your interest in the Artflow Project. Enjoy exploring and learning!
