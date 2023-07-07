@@ -23,12 +23,14 @@ Building this project proved to be a rewarding challenge, especially when it cam
 
 ## Screenshots
 
-![Screenshot 1](./images/1.png)
-![Screenshot 2](./images/3.png)
-![Screenshot 3](./images/4.png)
-![Screenshot 4](./images/5.png)
-![Screenshot 5](./images/6.png)
-![Screenshot 6](./images/7.png)
+![Screenshot 1](./public/images/1.png)
+![Screenshot 2](./public/images/2.png)
+![Screenshot 3](./public/images/3.png)
+![Screenshot 4](./public/images/4.png)
+![Screenshot 5](./public/images/5.png)
+![Screenshot 6](./public/images/6.png)
+![Screenshot 7](./public/images/7.png)
+![Screenshot 8](./public/images/8.png)
 
 ## Installation
 
