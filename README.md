@@ -4,7 +4,7 @@
 
 ## Description
 
-artflow Project is a dark version of Dribble, a popular platform for designers to showcase their work. This project was built as a means for me to learn Next.js 13, a powerful React framework, and enhance my understanding of web development concepts through hands-on experience.
+artflow Project is a dark version of Dribble for sharing designs, a popular platform for designers to showcase their work. This project was built as a means for me to learn Next.js 13, a powerful React framework, and enhance my understanding of web development concepts through hands-on experience.
 
 Building this project proved to be a rewarding challenge, especially when it came to working with GraphQL and Graphbase. By immersing myself in the development process, I was able to gain a deeper understanding of these technologies and solidify my knowledge.
 
@@ -41,7 +41,6 @@ To run the artflow Project locally, please follow these steps:
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm run dev`
 5. Open your browser and visit `http://localhost:3000`
-
 
 ## Contact
 
