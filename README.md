@@ -1,4 +1,4 @@
-# Artflow Project- Design-Sharing Platform
+# Artflow Project: Design Sharing Platform
 
 ![Artflow Project](./public/images/1.png)
 
