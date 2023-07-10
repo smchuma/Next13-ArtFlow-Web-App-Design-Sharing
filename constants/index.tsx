@@ -14,7 +14,6 @@ export const categoryFilters = [
   "Game Dev",
   "DevOps",
   "Data Science",
-  "Machine Learning",
 
   "E-commerce",
 ];
