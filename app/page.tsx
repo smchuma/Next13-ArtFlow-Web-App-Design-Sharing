@@ -30,7 +30,6 @@ export const revalidate = 0;
 
 const Home = async ({ searchParams: { category, endCursor } }: Props) => {
   const session = await getCurrentUser();
-  if (category === null) return "";
   const data = (await fetchAllProjects(category, endCursor)) as ProjectSearch;
   const projectsToDisplay = data?.projectSearch?.edges || [];
   const pagination = data?.projectSearch?.pageInfo;
