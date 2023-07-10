@@ -12,7 +12,7 @@ const Banner = async () => {
         </p>
         <input
           placeholder="search"
-          className="p-3 px-5 mt-8 outline-none text-black rounded-full w-[100%]"
+          className="p-3 px-5 mt-8 outline-none text-black rounded-full w-[80%]"
         />
       </div>
     </section>
