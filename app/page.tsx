@@ -36,6 +36,7 @@ const Home = async ({ searchParams: { category, endCursor } }: Props) => {
   if (projectsToDisplay.length === 0) {
     return (
       <section className="">
+        <Banner />
         <section className="px-32 py-5 border-b-2 border-gray-100 ">
           <Categories />
         </section>
@@ -48,7 +49,7 @@ const Home = async ({ searchParams: { category, endCursor } }: Props) => {
 
   return (
     <section>
-      {!session?.user && <Banner />}
+      <Banner />
       <section className="px-32 py-5 border-b-2 border-gray-100 ">
         <Categories />
       </section>
