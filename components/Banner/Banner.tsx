@@ -2,13 +2,13 @@ const Banner = async () => {
   return (
     <section className="banner">
       <div className="banner-content">
-        <h1 className="text-4xl font-bold ">
-          Explore the world’s <br /> leading design portfolios
+        <h1 className="text-4xl font-bold mb-4 ">ArtFlow Designs</h1>
+        <h1 className="text-2xl font-normal ">
+          Explore the world’s leading design portfolios
         </h1>
         <p className="mt-4">
-          Millions of designers and agencies around the world showcase their
-          portfolio work on Dribbble - the home to the world’s best design and
-          creative professionals.
+          artFlow is the world’s leading community for creatives to share, grow,
+          and get hired.
         </p>
         <input
           placeholder="search"

@@ -2,8 +2,6 @@ import { NavLinks } from "@/constants";
 import Link from "next/link";
 import AuthProviders from "../AuthProviders/AuthProviders";
 import { getCurrentUser } from "@/lib/session";
-import Image from "next/image";
-import { signOut } from "next-auth/react";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
 
 const Navbar = async () => {

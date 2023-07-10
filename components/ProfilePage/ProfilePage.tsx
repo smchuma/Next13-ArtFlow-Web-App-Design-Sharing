@@ -21,7 +21,7 @@ const ProfilePage = ({ user }: Props) => (
         />
         <p className="text-4xl font-bold mt-10">{user?.name}</p>
         <p className="md:text-4xl text-2xl font-extrabold md:mt-10 mt-5 max-w-lg">
-          I’m Software Engineer
+          Software Engineer
         </p>
 
         <div className="flex mt-8 gap-5 w-full flex-wrap">
