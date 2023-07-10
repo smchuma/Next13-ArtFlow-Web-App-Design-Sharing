@@ -30,51 +30,44 @@ export const revalidate = 0;
 
 const Home = async ({ searchParams: { category, endCursor } }: Props) => {
   const session = await getCurrentUser();
+  if (category === null) return "";
   const data = (await fetchAllProjects(category, endCursor)) as ProjectSearch;
   const projectsToDisplay = data?.projectSearch?.edges || [];
-  console.log("session");
-
-  if (projectsToDisplay.length === 0) {
-    return (
-      <section className="">
-        <section className="px-32 py-5 border-b-2 border-gray-100 ">
-          <Categories />
-        </section>
-        <p className="no-result text-center py-40">No projects found</p>
-      </section>
-    );
-  }
-
   const pagination = data?.projectSearch?.pageInfo;
 
   return (
     <section>
-      <Banner />
+      {!session?.user ? <Banner /> : ""}
       <section className="px-32 py-5 border-b-2 border-gray-100 ">
         <Categories />
       </section>
-      <section className="projects-grid paddings">
-        {projectsToDisplay.map(({ node }: { node: ProjectInterface }) => (
-          <ProjectCard
-            key={node?.id}
-            id={node?.id}
-            image={node?.image}
-            title={node?.title}
-            name={node?.createdBy?.name}
-            avatarUrl={node?.createdBy?.avatarUrl}
-            userId={node?.createdBy?.id}
-          />
-        ))}
-        C
-      </section>
-      <div className="paddings">
-        <LoadMore
-          startCursor={pagination.startCursor}
-          endCursor={pagination.endCursor}
-          hasPreviousPage={pagination.hasPreviousPage}
-          hasNextPage={pagination.hasNextPage}
-        />
-      </div>
+      {projectsToDisplay.length === 0 ? (
+        <p className="no-result text-center py-40">No projects found</p>
+      ) : (
+        <>
+          <section className="projects-grid paddings">
+            {projectsToDisplay.map(({ node }: { node: ProjectInterface }) => (
+              <ProjectCard
+                key={node?.id}
+                id={node?.id}
+                image={node?.image}
+                title={node?.title}
+                name={node?.createdBy?.name}
+                avatarUrl={node?.createdBy?.avatarUrl}
+                userId={node?.createdBy?.id}
+              />
+            ))}
+          </section>
+          <div className="paddings">
+            <LoadMore
+              startCursor={pagination.startCursor}
+              endCursor={pagination.endCursor}
+              hasPreviousPage={pagination.hasPreviousPage}
+              hasNextPage={pagination.hasNextPage}
+            />
+          </div>
+        </>
+      )}
     </section>
   );
 };
